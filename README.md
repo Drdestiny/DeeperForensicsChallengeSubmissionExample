@@ -179,4 +179,4 @@ docker push 212923332099.dkr.ecr.us-west-2.amazonaws.com/deeperforensics-challen
 
 After you push to the repo, the evaluation will automatically start and you will receive an email as a notification. In **2.5 hours** you should receive another email with the evaluation result. If there is something wrong like timeout or error, you will still receive a reminder email. *Please look in the spam if you don't receive any email.*
 
-Finally, you can submit the evaluation result to the [challenge website](https://competitions.codalab.org/competitions/25228).
+Finally, you can submit the evaluation result (**".zip" file**) to the [challenge website](https://competitions.codalab.org/competitions/25228).

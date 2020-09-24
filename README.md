@@ -184,10 +184,10 @@ After you push to the repo, the evaluation will automatically start and you will
 Finally, you can submit the evaluation result (**".zip" file**) to the [challenge website](https://competitions.codalab.org/competitions/25228).
 
 
-## PROBLEMS YOU MAY ENCOUNTER!
+## PROBLEMS YOU MAY ENCOUNTER
 If you encounter problems during evaluation, please search here for the solution FIRST. If your problem still exists, send email to us.
 
-Q1: I submitted the Docker image several hours ago (let's say, 4 hours). But I still receive nothing. There is also no email in spam. what should I do?
+Q1: I submitted the Docker image several hours ago (let's say, 4 hours). But I still receive nothing. There is also no email in the spam. what should I do?
 
-A1: First of all, if there is some bug in your submission, you'll receive an email informing you that your submission fails, including timeout (time limit is 3 hours). So it's not due to failure. The reason is, the command is not `python run_evaluation.py` when entering your submitted Docker image, which means that it outputs nothing and exit. It's may you didn't build the Docker image properly, like using a container to build another image, which is not correct (notice: container is different from image. Their relationship is like one between class and instance). If everything goes well, when you run the Docker image, it will automatically run run_evaluation.py. If you don't know how to properly build the Docker image, please refer to step 2 in [Submit the Docker image](#submit-the-docker-image).
+A1: First of all, if there are some bugs in your submission, you'll receive an email informing you that your submission fails, including timeout (time limit is 2.5 hours in the development phase). So not receiving email is not due to failure. The reason is, the command is not `python run_evaluation.py` when entering your submitted Docker image, which means that it outputs nothing and exit. Maybe you didn't build the Docker image properly. For example, using a container to build another image is not correct (Note: container is different from image. Their relationship is like the one between class and instance). If everything goes well, when you run the Docker image, it will automatically run `run_evaluation.py`. If you don't know how to properly build the Docker image, please refer to step 2 in [Submit the Docker image](#submit-the-docker-image).
 

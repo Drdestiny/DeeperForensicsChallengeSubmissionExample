@@ -94,6 +94,8 @@ from toy_predict import ToyPredictor as DeeperForensicsDetector
   -  [使用 Dockerfile 定制镜像 (Chinese)](https://yeasy.gitbook.io/docker_practice/image/build)
   -  [Dockerfile 指令详解 (Chinese)](https://yeasy.gitbook.io/docker_practice/image/dockerfile)
 
+- If you don't know how to build the Docker image, please refer to step 2 in [Submit the Docker image](#submit-the-docker-image).
+
 ## Test the Docker image locally
 
 The online evaluation for submissions may take several hours. It is slow to debug on the cloud (and the evaluation chances are limited). Hence, we provide the tools for the participants to locally test the correctness of the submission.
@@ -180,3 +182,11 @@ docker push 212923332099.dkr.ecr.us-west-2.amazonaws.com/deeperforensics-challen
 After you push to the repo, the evaluation will automatically start and you will receive an email as a notification. In **2.5 hours** you should receive another email with the evaluation result. If there is something wrong like timeout or error, you will still receive a reminder email. *Please look in the spam if you don't receive any email.*
 
 Finally, you can submit the evaluation result (**".zip" file**) to the [challenge website](https://competitions.codalab.org/competitions/25228).
+
+
+## PROBLEMS YOU MAY ENCOUNTER!
+If you encounter problems during evaluation, please search here for the solution FIRST. If your problem still exists, send email to us.
+
+Q: I submitted the Docker image several hours ago (let's say, 4 hours). But I still receive nothing. There is also no email in spam. what should I do?
+A: First of all, if there is some bug in your submission, you'll receive an email informing you that your submission fails, including timeout (time limit is 3 hours). So it's not due to failure. The reason is, the command is not `python run_evaluation.py` when entering your submitted Docker image, which means that it outputs nothing and exit. It's may you didn't build the Docker image properly, like using a container to build another image, which is not correct (notice: container is different from image. Their relationship is like one between class and instance). If everything goes well, when you run the Docker image, it will automatically run run_evaluation.py. If you don't know how to properly build the Docker image, please refer to step 2 in [Submit the Docker image](#submit-the-docker-image).
+

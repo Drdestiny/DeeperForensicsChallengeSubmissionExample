@@ -20,8 +20,8 @@ from eval_kit.extract_frames import extract_frames
 # DON'T CHANGE ANY CODE HERE, OR YOU MAY ENCOUNTER SOME UNEXPECTED PROBLEMS!
 
 WORKSPACE_BUCKET = 'deeperforensics-eval-workspace'
-VIDEO_LIST_PATH = 'test-data/deeperforensicis_runtime_eval_video_list.txt'
-VIDEO_PREFIX = 'test-data/'
+VIDEO_LIST_PATH = 'test-data-3k/deeperforensicis_runtime_eval_video_list.txt'
+VIDEO_PREFIX = 'test-data-3k/'
 UPLOAD_PREFIX = 'test-output/'
 TMP_PATH = '/tmp'
 

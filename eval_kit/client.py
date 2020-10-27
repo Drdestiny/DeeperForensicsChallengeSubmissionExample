@@ -21,7 +21,9 @@ from eval_kit.extract_frames import extract_frames
 
 WORKSPACE_BUCKET = 'deeperforensics-eval-workspace'
 VIDEO_LIST_PATH = 'test-data-3k/deeperforensicis_runtime_eval_video_list.txt'
+LOCAL_VIDEO_LIST_PATH = 'test-data/deeperforensicis_runtime_eval_video_list.txt'
 VIDEO_PREFIX = 'test-data-3k/'
+LOCAL_VIDEO_PREFIX = 'test-data/'
 UPLOAD_PREFIX = 'test-output/'
 TMP_PATH = '/tmp'
 
@@ -119,15 +121,15 @@ def get_local_frames_iter(max_number=None):
 
     return: tuple(video_id: str, frames: list)
     """
-    video_list = [x.strip() for x in open(VIDEO_LIST_PATH)]
+    video_list = [x.strip() for x in open(LOCAL_VIDEO_LIST_PATH)]
     logging.info("got local video list, {} videos".format(len(video_list)))
 
     for video_id in video_list:
         # get video from local file
         try:
-            frames = extract_frames(os.path.join(VIDEO_PREFIX, video_id))
+            frames = extract_frames(os.path.join(LOCAL_VIDEO_PREFIX, video_id))
         except:
-            logging.info("Failed to read image: {}".format(os.path.join(VIDEO_PREFIX, video_id)))
+            logging.info("Failed to read image: {}".format(os.path.join(LOCAL_VIDEO_PREFIX, video_id)))
             raise
         yield video_id, frames
 
